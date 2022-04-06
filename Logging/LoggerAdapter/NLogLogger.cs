@@ -13,7 +13,7 @@ public class NLogLogger<T> : LoggerService<T>
     {
     }
 
-    protected override void LogByFavoriteLibrary(Log log, Exception exception)
+    protected override void LogByLibrary(Log log, Exception exception)
     {
         var loggerMessage = log.ToString();
 

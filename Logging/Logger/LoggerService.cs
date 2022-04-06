@@ -21,7 +21,7 @@ public abstract class LoggerService<T> : ILoggerService<T>
 
     #endregion
 
-    protected abstract void LogByFavoriteLibrary(Log log, Exception exception);
+    protected abstract void LogByLibrary(Log log, Exception exception);
 
 
     #region GetExceptions
@@ -145,7 +145,7 @@ public abstract class LoggerService<T> : ILoggerService<T>
 
         log.Parameters = GetParameters(parameters);
 
-        LogByFavoriteLibrary(log, exception);
+        LogByLibrary(log, exception);
 
         Thread.CurrentThread.CurrentCulture = currentCultureInfo;
     }
